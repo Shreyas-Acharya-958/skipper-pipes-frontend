@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dustra- Factory & Industrial Template">
+
+    <!-- ========== Page Title ========== -->
+    <title>Skipper Pipes - Finalized Homepage</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/final/skipper-pipes-favicon.png" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/icofont.min.css" rel="stylesheet" />
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/js/swiper/swiper.min.css" rel="stylesheet"  />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+   
+    <style>
+        :root{
+            --sk-blue:#144372;          /* primary brand blue */
+            --sk-blue-dark:#083A7A;     /* hover / pressed */
+            --sk-navy:#082A5C;          /* header, hero, sidebar */
+            --sk-red:#E31E24;           /* brand accent */
+            --sk-sky:#EAF2FB;           /* light blue tint */
+            --sk-ink:#333333;           /* body text */
+            --sk-muted:#4e4e4e;         /* secondary text */
+            --sk-line:#D5E0EE;          /* borders */
+            --sk-bg:#F5F8FC;            /* page background */
+            --sk-green:#1E7B4B;
+            --sk-green-tint:#E4F4EB;
+            --sk-danger:#C4161C;
+            --sk-font:"Poppins","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+        }
+
+        /* ---------- flow section ---------- */
+        .flow-section{padding:44px 0 56px; background: #f5f5f5;}
+        .flow{display:flex;align-items:center;list-style:none;margin:0 auto 32px;padding:0;max-width:640px}
+        .flow-step{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--sk-muted);white-space:nowrap}
+        .joint{width:36px;height:36px;border-radius:50%;border:3px solid var(--sk-line);background:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:var(--sk-muted);flex-shrink:0;transition:border-color .3s,background .3s,color .3s}
+        .joint .ic-svg{stroke-width:2.6;font-size:15px}
+        .flow-step.act{color:var(--sk-ink);font-weight:600}
+        .flow-step.act .joint{border-color:var(--sk-blue);color:var(--sk-blue);box-shadow:0 0 0 4px rgba(11,76,158,.15)}
+        .flow-step.dn{color:var(--sk-blue)}
+        .flow-step.dn .joint{background:var(--sk-blue);border-color:var(--sk-blue);color:#fff}
+        .pipe{flex:1;min-width:24px;height:8px;margin:0 12px;background:var(--sk-line);border-radius:4px;position:relative;overflow:hidden}
+        .pipe i{position:absolute;inset:0;width:0;background:var(--sk-blue);border-radius:4px;transition:width .6s ease}
+        .pipe.dn i{width:100%}
+        @media(max-width:575.98px){
+        .flow-step .lbl{display:none}
+        .flow-step.act .lbl{display:inline}
+        .pipe{margin:0 8px}
+        }
+
+        .hint{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;color:#144372;font-weight: 500; margin-bottom:20px}
+        .hint .ic-svg{font-size:18px;color:var(--sk-blue)}
+
+        /* intent cards */
+        .intent{width:100%;height:100%;text-align:left;background:#fff;border:1px solid var(--sk-line);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;cursor:pointer;font-family:inherit;color:var(--sk-ink);transition:border-color .15s,box-shadow .15s}
+        .intent:hover{border-color:var(--sk-blue);box-shadow:0 8px 24px rgba(11,76,158,.12)}
+        .intent:focus-visible{outline:3px solid rgba(11,76,158,.45);outline-offset:2px}
+        .intent.sel{border-color:var(--sk-blue);box-shadow:0 0 0 1px var(--sk-blue)}
+        .intent-ic{width:46px;height:46px;border-radius:10px;background:var(--sk-sky);color:var(--sk-blue);display:flex;align-items:center;justify-content:center;font-size:23px;margin-bottom:14px;transition:background .15s,color .15s}
+        .intent:hover .intent-ic,.intent.sel .intent-ic{background:var(--sk-blue);color:#fff}
+        .intent-t{font-size:15px;font-weight:600;line-height:1.35;margin-bottom:4px}
+        .intent-s{font-size:13.5px;color:var(--sk-muted);line-height:1.5; font-weight: 500;}
+
+        /* form panel */
+        .panel-box{background:#fff;border:1px solid var(--sk-line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(8,42,92,.07)}
+        .panel-main{padding:30px 32px}
+        .panel-side{background:#144372;color:rgba(255,255,255,.88);padding:30px 26px;height:100%}
+        @media(max-width:991.98px){.panel-main{padding:24px 20px}.panel-side{padding:24px 20px}}
+        .back{display:inline-flex;align-items:center;gap:6px;border:0;background:none;padding:0;font-family:inherit;font-size:14px;font-weight:500;color:var(--sk-blue);cursor:pointer;margin-bottom:16px}
+        .back:hover{color:var(--sk-blue-dark);text-decoration:underline}
+        .form-title{font-size:22px;margin:0 0 4px; font-weight: 600;}
+        .form-title:focus{outline:none}
+        .form-sub{font-size:14px;color:var(--sk-muted);margin-bottom:22px}
+        .form-sub b{color:#FFA800;font-weight:600}
+
+        /* form controls */
+        .form-group{margin-bottom:1.15rem}
+        .form-group label{font-size:13.5px;font-weight:500;color:var(--sk-ink);margin-bottom:.35rem}
+        .req{color:#FFA800;font-weight:600}
+        .opt{color:var(--sk-muted);font-weight:400}
+        .form-control,.custom-select{height:46px;border:1px solid #C3D1E4;border-radius:8px;font-family:inherit;font-size:14.5px;color:var(--sk-ink);padding:.55rem .9rem}
+        textarea.form-control{height:auto;min-height:116px;resize:vertical}
+        .form-control::placeholder{color:#8795AB}
+        .form-control:focus,.custom-select:focus{border-color:var(--sk-blue);box-shadow:0 0 0 3px rgba(11,76,158,.18);outline:none}
+        .fd.err .form-control,.fd.err .custom-select,.fd.err .upload-box{border-color:var(--sk-danger)}
+        .em{display:none;font-size:12.5px;color:var(--sk-danger);margin-top:.3rem}
+        .fd.err .em{display:block}
+
+        /* upload */
+        .upload{position:relative}
+        .upload-input{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+        .upload-box{display:flex;align-items:center;justify-content:center;gap:10px;text-align:center;border:1.5px dashed #9FB4D0;border-radius:8px;background:var(--sk-bg);color:var(--sk-muted);font-size:14px;font-weight:400!important;padding:16px;margin:0!important;cursor:pointer;transition:border-color .15s,background .15s}
+        .upload-box:hover{border-color:var(--sk-blue);background:var(--sk-sky)}
+        .upload-box .ic-svg{font-size:20px;color:var(--sk-blue)}
+        .upload-input:focus-visible+.upload-box{outline:3px solid rgba(11,76,158,.45);outline-offset:2px}
+        .upload.has-file .upload-box{border-style:solid;border-color:var(--sk-blue);color:var(--sk-ink);font-weight:500!important}
+
+        .infobx{display:flex;gap:10px;align-items:flex-start;background:var(--sk-sky);border-left:4px solid var(--sk-blue);border-radius:6px;padding:12px 14px;font-size:13.5px;color:var(--sk-ink);margin-bottom:1.15rem}
+        .infobx .ic-svg{font-size:18px;color:var(--sk-blue);margin-top:2px}
+
+        /* buttons */
+        .btn-sk{display:block;width:100%;background:var(--sk-blue);border:2px solid var(--sk-blue);color:#fff;font-family:inherit;font-weight:600;font-size:15px;padding:.8rem 1.5rem;border-radius:999px;transition:background .15s,border-color .15s}
+        .btn-sk:hover{background:#FFA800;border-color:#FFA800;color:#fff}
+        .btn-sk:focus-visible{outline:3px solid rgba(227,30,36,.45);outline-offset:2px}
+        .btn-sk-line{display:inline-block;background:#fff;border:2px solid var(--sk-blue);color:var(--sk-blue);font-family:inherit;font-weight:600;font-size:14.5px;padding:.6rem 1.6rem;border-radius:999px;cursor:pointer;transition:background .15s,color .15s}
+        .btn-sk-line:hover{background:var(--sk-blue);color:#fff}
+        .formerr{display:none;color:var(--sk-danger);font-size:13.5px;margin-top:12px;text-align:center}
+
+        /* sidebar */
+        .sbh{font-size:15px;font-weight:600;color:#fff;margin:0 0 12px}
+        .sbi{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px;font-size:14px;line-height:1.5}
+        .sbi .ic-svg{font-size:19px;margin-top:2px;color:#fff;background:rgba(255,255,255,.12);padding:5px;width:30px;height:30px;border-radius:8px;box-sizing:border-box}
+        .sbi a,.sbnote a{color:#fff;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#FFA800}
+        .sbi a:hover,.sbnote a:hover{color:#fff;text-decoration-color:#fff}
+        .sbdiv{height:1px;background:rgba(255,255,255,.18);margin:18px 0}
+        .sbnote{font-size:13.5px;color:rgba(255,255,255,.8);line-height:1.6}
+        .stags{display:flex;flex-wrap:wrap;gap:6px}
+        .stag{font-size:12.5px;padding:3px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.4);color:#fff}
+
+        /* thank you */
+        .ty{background:#fff;border:1px solid var(--sk-line);border-radius:14px;text-align:center;padding:56px 24px;box-shadow:0 10px 30px rgba(8,42,92,.07)}
+        .ty-icon{width:72px;height:72px;border-radius:50%;background:var(--sk-green-tint);color:var(--sk-green);display:inline-flex;align-items:center;justify-content:center;font-size:38px;margin-bottom:18px}
+        .ty h2{font-size:24px;margin-bottom:8px}
+        .ty h2:focus{outline:none}
+        .ty p{max-width:440px;margin:0 auto 24px;color:var(--sk-muted)}
+
+        /* ---------- direct contact ---------- */
+        .direct{padding:56px 0;background:#fff;border-top:1px solid var(--sk-line)}
+        .direct h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:.4rem; font-weight: 600;}
+        .direct .lead-sm{color:var(--sk-muted);margin-bottom:26px;max-width:480px}
+        .dline{display:flex;gap:14px;margin-bottom:20px}
+        .dline-ic{width:44px;height:44px;border-radius:10px;background:var(--sk-sky);color:var(--sk-blue);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+        .dline h3{font-size:15px;margin:0 0 2px; font-weight: 600;}
+        .dline p{margin:0;color:var(--sk-muted);font-size:14.5px}
+        .dline a{color:var(--sk-ink);font-weight:500;text-decoration:none}
+        .dline a:hover{color:var(--sk-blue);text-decoration:underline}
+        .social{display:flex;gap:10px;margin-top:6px}
+        .social a{width:42px;height:42px;border-radius:50%;border:1px solid var(--sk-line);display:flex;align-items:center;justify-content:center;color:var(--sk-blue);font-size:19px;transition:background .15s,color .15s,border-color .15s}
+        .social a:hover{background:var(--sk-blue);border-color:var(--sk-blue);color:#fff}
+        .map-frame{border-radius:14px;overflow:hidden;border:1px solid var(--sk-line);height:100%;min-height:340px;background:var(--sk-sky)}
+        .map-frame iframe{display:block;width:100%;height:100%;min-height:340px;border:0}
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Header  -->
+    <header id="home">
+
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default attr-bg navbar-fixed white no-background bootsnav nav-full">
+
+            <!-- Start Top Search -->
+            <div class="top-search">
+                <div class="container-full">
+                    <form method="get">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- End Top Search -->
+
+            <div class="container">
+
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <!-- <li class="search"><a href="#"><i class="ti-search"></i></a></li> -->
+                        <li class="side-menu">
+                            <a href="#">
+                                <span class="bar-1"></span>
+                                <span class="bar-2"></span>
+                                <span class="bar-3"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>       
+                <!-- End Atribute Navigation -->
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/final/logo.png" class="logo regular" alt="Logo">
+                        <img src="assets/img/final/logo.png" class="logo logo-responsive" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-center" data-in="#" data-out="#">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Company</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="overview.html">Overview</a></li>
+                                <li><a href="leadership.html">Leadership</a></li>
+                                <li><a href="manufacturing.html">Manufacturing</a></li>
+                                <li><a href="csr.html">CSR</a></li>
+                                <li><a href="certifications.html">Certifications</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" >Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="why-skipper-pipes.html">Why Skipper Pipes</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Plumbing & Sewage</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="product-single.html">UPVC Pipes</a></li>
+                                        <li><a href="#">CPVC Pipes</a></li>
+                                        <li><a href="#">SWR Pipes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Agriculture Pipes</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Borewell</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Casing Pipes</a></li>
+                                        <li><a href="#">Column Pipes</a></li>
+                                        <li><a href="#">Ribbed Strainer Pipes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">HDPE Pipes</a></li>
+                                <li><a href="#">Marina Tank</a></li>
+                                <li><a href="#">Bath Fittings</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="network.html">Network</a>
+                        </li>
+                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Partner</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="become-dealer.html">Become a Dealer</a></li>
+                                <li><a href="become-distributor.html">Become a Distributor</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Resources</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="news.html">News</a></li>
+                                <li><a href="blogs.html">Blogs</a></li>
+                                <li><a href="media.html">Media</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                                <li><a href="faqs.html">FAQs</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+
+            <!-- Start Side Menu -->
+            <div class="side">
+                <a href="#" class="close-side"><i class="fas fa-times"></i></a>
+                <div class="widget">
+                    <img src="assets/img/final/Logo-HR (1).png" alt="Logo">
+                    <p>
+                       Trusted piping solutions engineered for strength, hygiene, and long-term durability across infrastructure, agriculture, industrial, and residential applications.
+                    </p>
+                </div>
+                <div class="widget address">
+                    <div>
+                        <ul>
+                            <li>
+                                <div class="content">
+                                    <p>Address</p> 
+                                    <strong>3A, Loudon Street Kolkata- 700017</strong>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <p>Email</p> 
+                                    <strong>enquiry@skipperlimited.com</strong>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <p>Contact</p> 
+                                    <strong>+91 33 2285 1231/32</strong>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget newsletter">
+                    <h4 class="title">Get Subscribed!</h4>
+                    <form action="#">
+                        <div class="input-group stylish-input-group">
+                            <input type="email" placeholder="Enter your e-mail" class="form-control" name="email">
+                            <span class="input-group-addon">
+                                <button type="submit">
+                                    <i class="fas fa-long-arrow-right"></i>
+                                </button>  
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="widget social">
+                    <ul class="link">
+                        <li><a href="#" target="_blank">
+                            <?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="22px" height="45px">    <path d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z"/></svg>
+                        </a></li>
+                        
+                        <li><a href="https://www.instagram.com/skipperpipes/" target="_blank">
+                            <img src="assets/img/final2/Icons8/icons8-instagram-100.svg" alt="">
+                        </a></li>
+
+                        <li><a href="https://www.linkedin.com/company/skipperpipes/" target="_blank">
+                            <img src="assets/img/final2/Icons8/icons8-linkedin-100.svg" alt="">
+                        </a></li>
+                        
+                        <li><a href="https://x.com/SkipperPipes" target="_blank">
+                            <img src="assets/img/final2/Icons8/icons8-x-100.svg" alt="">
+                        </a></li>
+                        <li><a href="https://www.youtube.com/@skipperpipes358" target="_blank">
+                            <img src="assets/img/final2/Icons8/icons8-youtube-100 copy.svg" alt="">
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Side Menu -->
+
+        </nav>
+        <!-- End Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Hero banner-section -->
+    <section class="hero-banner2">
+        <div class="hero-banner2-bg">
+            <img src="assets/img/final/blogs-banner-final1.jpg" alt="{{ image_alt_text('assets/img/final/blogs-banner1.jpg', 'Contact Us Banner') }}">
+        </div>
+        <div class="hero-banner2-overlay"></div>
+        <div class="hero-banner2-content">
+            <h1>Contact Us</h1>
+            <p>For assistance, dealership queries, technical support, or more details.</p>
+        </div>
+    </section>
+    <!-- Hero banner-section ends -->
+
+    <!-- Breadcrumb  -->
+    <div class="breadcrumb-area bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li class="active">Contact Us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== 3-STEP FLOW ===================== -->
+    <section class="flow-section" id="flow" aria-labelledby="flowHeading">
+    <div class="container">
+        <h2 class="sr-only" id="flowHeading">Contact form: choose a reason, fill in your details, and send</h2>
+        <div class="sr-only" aria-live="polite" id="live"></div>
+
+        <ol class="flow" aria-label="Progress">
+        <li class="flow-step act" id="sp1"><span class="joint" id="sn1">1</span><span class="lbl">Choose reason</span></li>
+        <li class="pipe" id="sd1" aria-hidden="true"><i></i></li>
+        <li class="flow-step" id="sp2"><span class="joint" id="sn2">2</span><span class="lbl">Fill details</span></li>
+        <li class="pipe" id="sd2" aria-hidden="true"><i></i></li>
+        <li class="flow-step" id="sp3"><span class="joint" id="sn3">3</span><span class="lbl">Done</span></li>
+        </ol>
+
+        <!-- Step 1 -->
+        <div id="v1">
+        <p class="hint"><span data-ic="hand-click"></span> Select a reason to continue</p>
+        <div class="row">
+            <div class="col-6 col-lg-3 mb-3 px-2"><button type="button" class="intent" data-k="dealer"><span class="intent-ic" data-ic="building-store"></span><span class="intent-t">Become a dealer</span><span class="intent-s">Retail or wholesale trade partner enquiry</span></button></div>
+            <div class="col-6 col-lg-3 mb-3 px-2"><button type="button" class="intent" data-k="dist"><span class="intent-ic" data-ic="truck-delivery"></span><span class="intent-t">Become a distributor</span><span class="intent-s">Regional distribution network enquiry</span></button></div>
+            <div class="col-6 col-lg-3 mb-3 px-2"><button type="button" class="intent" data-k="proj"><span class="intent-ic" data-ic="building-arch"></span><span class="intent-t">Infrastructure / project enquiry</span><span class="intent-s">Large-scale or government project supply</span></button></div>
+            <div class="col-6 col-lg-3 mb-3 px-2"><button type="button" class="intent" data-k="prod"><span class="intent-ic" data-ic="box"></span><span class="intent-t">Product / general enquiry</span><span class="intent-s">Specifications, pricing, or availability</span></button></div>
+            <div class="col-6 col-lg-3 mb-3 px-2"><button type="button" class="intent" data-k="jobs"><span class="intent-ic" data-ic="user-plus"></span><span class="intent-t">Careers / job application</span><span class="intent-s">Open positions or unsolicited applications</span></button></div>
+            <div class="col-6 col-lg-3 mb-3 px-2"><button type="button" class="intent" data-k="comp"><span class="intent-ic" data-ic="message-report"></span><span class="intent-t">Complaint / after-sales support</span><span class="intent-s">Product issues, returns, or warranty</span></button></div>
+            <div class="col-6 col-lg-3 mb-3 px-2"><button type="button" class="intent" data-k="media"><span class="intent-ic" data-ic="speakerphone"></span><span class="intent-t">Media &amp; advertising</span><span class="intent-s">Press, editorial, or campaign collaboration</span></button></div>
+            <div class="col-6 col-lg-3 mb-3 px-2"><button type="button" class="intent" data-k="inv"><span class="intent-ic" data-ic="chart-line"></span><span class="intent-t">Investor relations</span><span class="intent-s">Shareholding, financials, or IR queries</span></button></div>
+        </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div id="v2" hidden>
+        <div class="panel-box">
+            <div class="row no-gutters">
+            <div class="col-lg-8">
+                <div class="panel-main">
+                <button type="button" class="back" id="backBtn"><span data-ic="arrow-left"></span> Change reason</button>
+                <h2 class="form-title" id="flbl" tabindex="-1"></h2>
+                <p class="form-sub">Fields marked <b>*</b> are required.</p>
+                <div id="fout"></div>
+                </div>
+            </div>
+            <div class="col-lg-4"><aside class="panel-side" id="sout" aria-label="Helpful information"></aside></div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div id="v3" hidden>
+        <div class="ty">
+            <span class="ty-icon" data-ic="circle-check"></span>
+            <h2 id="tyh" tabindex="-1">Thank you, we’ve received your message</h2>
+            <p id="tym"></p>
+            <button type="button" class="btn-sk-line" id="againBtn">Submit another enquiry</button>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- ===================== DIRECT CONTACT ===================== -->
+<section class="direct" aria-labelledby="directHeading">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <h2 id="directHeading">Prefer to reach us directly?</h2>
+        <p class="lead-sm">Our team is available at the registered and corporate office in Kolkata.</p>
+
+        <div class="dline">
+          <span class="dline-ic" data-ic="map-pin"></span>
+          <div><h3>Registered &amp; corporate office</h3>
+            <p>12th Floor, Tirumala Building, 22, E Topsia Rd, East Topsia, Tiljala, Kolkata, West Bengal 700046.</p></div>
+        </div>
+        <div class="dline">
+          <span class="dline-ic" data-ic="phone"></span>
+          <div><h3>Call us</h3><p><a href="tel:+913322851231">+91 33 2285 1231</a> / <a href="tel:+913322851232">32</a></p></div>
+        </div>
+        <div class="dline">
+          <span class="dline-ic" data-ic="mail"></span>
+          <div><h3>Email</h3><p><a href="mailto:enquiry@skipperlimited.com">enquiry@skipperlimited.com</a></p></div>
+        </div>
+
+        <div class="social" aria-label="Skipper Pipes on social media">
+          <a href="https://www.facebook.com/skipperpipes/" target="_blank" rel="noopener" aria-label="Facebook" data-ic="facebook"></a>
+          <a href="https://www.instagram.com/skipperpipes/" target="_blank" rel="noopener" aria-label="Instagram" data-ic="instagram"></a>
+          <a href="https://www.linkedin.com/company/skipperpipes/" target="_blank" rel="noopener" aria-label="LinkedIn" data-ic="linkedin"></a>
+          <a href="https://x.com/skipperpipes" target="_blank" rel="noopener" aria-label="X" data-ic="x"></a>
+          <a href="https://www.youtube.com/@skipper-pipes" target="_blank" rel="noopener" aria-label="YouTube" data-ic="youtube"></a>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="map-frame">
+          <iframe title="Map showing Skipper Pipes corporate office, Tirumala Building, Kolkata" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.011612835407!2d88.38486727481049!3d22.541237734120013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277daf0a201f3%3A0x784f1d8e2030aaed!2sSkipper%20Pipes-India's%20Safest%20Pipes%20(PVC%20Pipes)!5e0!3m2!1sen!2sus!4v1795442237541!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+
+
+    <!-- Footer Section  -->
+    <footer>
+        <div class="container">
+            <div class="f-items default-padding">
+                <div class="row">
+                     <!-- Single Item -->
+                    <div class="col-lg-4 col-md-6 single-item">
+                        <div class="f-item contact">
+                            <!-- <h4 class="widget-title">About Us</h4> -->
+                            <img src="assets/img/final/Logo-HR (1).png" class="w-50 mb-3" alt="">
+                            <p>
+                               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum qui minima reiciendis ea, aperiam neque!
+                            </p>
+                            <ul class="footer-social">
+                                <li><a href="https://www.facebook.com/skipperpipes/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/skipperpipes/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/skipperpipes/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.youtube.com/@skipperpipes358" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                <!-- <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li> -->
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    
+                    <!-- Single Item -->
+                    <div class="col-lg-2 col-md-6 single-item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Other Links</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Privacy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Disclaimer</a>
+                                </li>
+                                <li>
+                                    <a href="#">Resources</a>
+                                </li>
+                                <li>
+                                    <a href="#">Network</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-lg-2 col-md-6 single-item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Our Products</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">UPVC Pipes</a>
+                                </li>
+                                <li>
+                                    <a href="#">CPVC Pipes</a>
+                                </li>
+                                <li>
+                                    <a href="#">SWR Pipes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Agriculture Pipes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bath Fittings</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                     <!-- Single Item -->
+                    <div class="col-lg-4 col-md-6 single-item">
+                        <div class="f-item contact">
+                            <h4 class="widget-title">Contact Us</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, est!
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                   3A, Loudon Street Kolkata- 700017
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope-open"></i>
+                                    <a href="mailto:enquiry@skipperlimited.com">enquiry@skipperlimited.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Fixed Shape -->
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p>&copy; Copyright 2025. All Rights Reserved by <a href="#">Skipper Pipes</a></p>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <ul>
+                            <li>
+                                <a href="#">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Footer Bottom -->
+
+        <div class="fixed-shape">
+            <img src="assets/img/shape/footer-shape.png" alt="Shape">
+        </div>
+        <!-- End Fixed Shape -->
+    </footer>
+    <!-- Footer Section ends -->
+
+    <!-- ===================== FORM TEMPLATES =====================
+     One <template> per reason. Step 2 clones the matching one (id must be "form-" + the card's data-k).
+     In Laravel, replace each placeholder with: @include('forms.xxx')
+     Contents of <template> are inert, so duplicate ids across forms do not clash. -->
+<template id="form-dealer">
+    <!-- Become a dealer : replace with the real form -->
+    <form action="#" method="post" class="partner-application-form">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="full-name">Name <span>*</span></label>
+                <input type="text" class="form-control" id="full-name" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="phone">Mobile Number <span>*</span></label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+        </div>
+        <div class="form-row">
+            
+                <div class="form-group col-md-4">
+                <label for="firm-name">Firm Name</label>
+                <input type="text" class="form-control" id="firm-name">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="firm-name">GST Number</label>
+                <input type="number" class="form-control" id="firm-name">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="pincode">Pincode <span>*</span></label>
+                <input type="text" class="form-control" id="pincode" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="occupation">Current Occupation <span>*</span></label>
+                <input type="text" class="form-control" id="occupation" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="experience">Experience:</label>
+                <select id="experience" class="form-control">
+                    <option selected>Select Experience...</option>
+                    <option>1 to 5 Years</option>
+                    <option>6 to 10 Years</option>
+                    <option>10+ Years</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="dealership-interest">Select Dealership Option:</label>
+                <select id="dealership-interest" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>Pipes</option>
+                    <option>Tank</option>
+                    <option>Bathware</option>
+                    <option>All of the above</option>
+                </select>
+            </div>
+            <div class="form-group col-md-12 form-desc">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="100%" rows="3"></textarea>
+            </div>
+        </div>
+            <button type="submit" class="btn btn-dark theme theme2 btn-md mt-2">Submit Dealer Enquiry</button>
+    </form>
+</template>
+
+<template id="form-dist">
+  <!-- Become a distributor : replace with the real form -->
+  <form action="#" method="post" class="partner-application-form">
+      <div class="form-row">
+          <div class="form-group col-md-4">
+              <label for="full-name">Name <span>*</span></label>
+              <input type="text" class="form-control" id="full-name" required>
+          </div>
+          <div class="form-group col-md-4">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group col-md-4">
+              <label for="phone">Mobile Number <span>*</span></label>
+              <input type="tel" class="form-control" id="phone" required>
+          </div>
+      </div>
+      <div class="form-row">
+          
+            <div class="form-group col-md-4">
+              <label for="firm-name">Firm Name</label>
+              <input type="text" class="form-control" id="firm-name">
+          </div>
+          <div class="form-group col-md-4">
+              <label for="firm-name">GST Number</label>
+              <input type="number" class="form-control" id="firm-name">
+          </div>
+          <div class="form-group col-md-4">
+              <label for="pincode">Pincode <span>*</span></label>
+              <input type="text" class="form-control" id="pincode" required>
+          </div>
+      </div>
+      <div class="form-row">
+          <div class="form-group col-md-4">
+              <label for="occupation">Current Occupation <span>*</span></label>
+              <input type="text" class="form-control" id="occupation" required>
+          </div>
+          <div class="form-group col-md-4">
+              <label for="experience">Experience:</label>
+              <select id="experience" class="form-control">
+                  <option selected>Select Experience...</option>
+                  <option>1 to 5 Years</option>
+                  <option>6 to 10 Years</option>
+                  <option>10+ Years</option>
+              </select>
+          </div>
+          <div class="form-group col-md-4">
+              <label for="dealership-interest">Select Distributorship Option:</label>
+              <select id="dealership-interest" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>Pipes</option>
+                  <option>Tank</option>
+                  <option>Bathware</option>
+                  <option>All of the above    </option>
+              </select>
+          </div>
+          <div class="form-group col-md-12 form-desc">
+              <label for="description">Description</label>
+              <textarea name="description" id="description" cols="100%" rows="3"></textarea>
+          </div>
+      </div>
+        <button type="submit" class="btn btn-dark theme theme2 btn-md mt-2">Submit Distributor Enquiry</button>
+  </form>
+</template>
+
+<template id="form-proj">
+    <!-- Infrastructure / project enquiry : replace with the real form -->
+    <form class="partner-application-form" id="partner-application-form">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="full-name">Your Name <span>*</span></label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+                <div class="form-group col-md-6">
+                <label for="full-name">Project Name/Company Details <span>*</span></label>
+                <input type="text" class="form-control" id="company" required>
+            </div>
+            <div class="form-group col-md-12">
+                <label for="phone">Your Phone Number <span>*</span></label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            
+        
+        </div>
+        
+            <button type="submit" class="btn btn-dark theme theme2 btn-md mt-2">Enquire Now</button>
+    </form>
+</template>
+
+<template id="form-prod">
+    <!-- Product / general enquiry : replace with the real form -->
+    <form action="#" method="post" class="partner-application-form">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="full-name">Name <span>*</span></label>
+                <input type="text" class="form-control" id="full-name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email <span>*</span></label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="phone">Mobile Number <span>*</span></label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="subject">Subject </label>
+                <input type="text" class="form-control" id="subject">
+            </div>
+            <div class="form-group col-md-12 form-desc">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="100%" rows="3"></textarea>
+            </div>
+        </div>
+        
+            <button type="submit" class="btn btn-dark theme theme2 btn-md mt-2">Submit</button>
+    </form>
+</template>
+
+<template id="form-jobs">
+    <!-- Careers / job application : replace with the real form -->
+    <form action="#" method="post" class="partner-application-form">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="full-name">Name <span>*</span></label>
+                <input type="text" class="form-control" id="full-name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email <span>*</span></label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="phone">Mobile Number <span>*</span></label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="subject">Subject </label>
+                <input type="text" class="form-control" id="subject">
+            </div>
+            <div class="form-group col-md-12 form-desc">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="100%" rows="3"></textarea>
+            </div>
+        </div>
+        
+            <button type="submit" class="btn btn-dark theme theme2 btn-md mt-2">Submit</button>
+    </form>
+</template>
+
+<template id="form-comp">
+    <!-- Complaint / after-sales support : replace with the real form -->
+    <form action="#" method="post" class="partner-application-form">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="full-name">Name <span>*</span></label>
+                <input type="text" class="form-control" id="full-name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email <span>*</span></label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="phone">Mobile Number <span>*</span></label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="subject">Subject </label>
+                <input type="text" class="form-control" id="subject">
+            </div>
+            <div class="form-group col-md-12 form-desc">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="100%" rows="3"></textarea>
+            </div>
+        </div>
+        
+            <button type="submit" class="btn btn-dark theme theme2 btn-md mt-2">Submit</button>
+    </form>
+</template>
+
+<template id="form-media">
+    <!-- Media &amp; advertising : replace with the real form -->
+    <form action="#" method="post" class="partner-application-form">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="full-name">Name <span>*</span></label>
+                <input type="text" class="form-control" id="full-name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email <span>*</span></label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="phone">Mobile Number <span>*</span></label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="subject">Subject </label>
+                <input type="text" class="form-control" id="subject">
+            </div>
+            <div class="form-group col-md-12 form-desc">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="100%" rows="3"></textarea>
+            </div>
+        </div>
+        
+            <button type="submit" class="btn btn-dark theme theme2 btn-md mt-2">Submit</button>
+    </form>
+</template>
+
+<template id="form-inv">
+    <!-- Investor relations : replace with the real form -->
+    <form action="#" method="post" class="partner-application-form">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="full-name">Name <span>*</span></label>
+                <input type="text" class="form-control" id="full-name" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email <span>*</span></label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="phone">Mobile Number <span>*</span></label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="subject">Subject </label>
+                <input type="text" class="form-control" id="subject">
+            </div>
+            <div class="form-group col-md-12 form-desc">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" cols="100%" rows="3"></textarea>
+            </div>
+        </div>
+        
+            <button type="submit" class="btn btn-dark theme theme2 btn-md mt-2">Submit</button>
+    </form>
+</template>
+
+
+
+
+
+    
+ <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/modernizr.custom.13711.js"></script>
+
+    <!-- timeline carousel -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'></script>
+
+    <script src="assets/js/swiper/swiper.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/progress-bar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.simpleLoadMore.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script>
+(function(){
+'use strict';
+
+/* ---------- icons ---------- */
+var ICONS={            /* icon name used in the page -> Font Awesome classes (change icons here only) */
+'hand-click':'fa-solid fa-hand-pointer',
+'building-store':'fa-solid fa-store',
+'truck-delivery':'fa-solid fa-truck-fast',
+'building-arch':'fa-solid fa-city',
+'box':'fa-solid fa-box',
+'user-plus':'fa-solid fa-user-plus',
+'message-report':'fa-solid fa-headset',
+'speakerphone':'fa-solid fa-bullhorn',
+'chart-line':'fa-solid fa-chart-line',
+'arrow-left':'fa-solid fa-arrow-left',
+'clock':'fa-regular fa-clock',
+'map-pin':'fa-solid fa-location-dot',
+'gift':'fa-solid fa-gift',
+'medal':'fa-solid fa-medal',
+'user-check':'fa-solid fa-user-check',
+'file-description':'fa-regular fa-file-lines',
+'mail':'fa-regular fa-envelope',
+'phone':'fa-solid fa-phone',
+'users':'fa-solid fa-users',
+'refresh':'fa-solid fa-rotate',
+'upload':'fa-solid fa-cloud-arrow-up',
+'photo':'fa-regular fa-image',
+'info-circle':'fa-solid fa-circle-info',
+'external-link':'fa-solid fa-arrow-up-right-from-square',
+'building':'fa-regular fa-building',
+'check':'fa-solid fa-check',
+'circle-check':'fa-regular fa-circle-check',
+'facebook':'fa-brands fa-facebook-f',
+'instagram':'fa-brands fa-instagram',
+'linkedin':'fa-brands fa-linkedin-in',
+'x':'fa-brands fa-x-twitter',
+'youtube':'fa-brands fa-youtube'
+};
+function svg(n){return '<i class="ic '+(ICONS[n]||'')+'" aria-hidden="true"></i>';}
+function paintIcons(root){
+  (root||document).querySelectorAll('[data-ic]').forEach(function(el){
+    el.insertAdjacentHTML('afterbegin',svg(el.getAttribute('data-ic')));
+    el.removeAttribute('data-ic');
+  });
+}
+/* ---------- data ---------- */
+var STATES=['Andaman & Nicobar Islands','Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chandigarh','Chhattisgarh','Dadra & Nagar Haveli and Daman & Diu','Delhi','Goa','Gujarat','Haryana','Himachal Pradesh','Jammu & Kashmir','Jharkhand','Karnataka','Kerala','Ladakh','Lakshadweep','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Puducherry','Punjab','Rajasthan','Sikkim','Tamil Nadu','Telangana','Tripura','Uttar Pradesh','Uttarakhand','West Bengal'];
+var PRODUCTS=['UPVC Pipes','CPVC Pipes','SWR Pipes','Agri Pipes','Casing Pipes','Column Pipes','Strainer Pipes','HDPE Pipes','Marina Tank','Bath Fittings'];
+var PHONE='+91 33 2285 1231/32';
+
+var NAME={l:'Full name',r:1,p:'Your name',a:'name'};
+var MOB={l:'Mobile number',r:1,t:'tel',p:'+91 98765 43210',a:'tel'};
+var EMAIL={l:'Email',r:1,t:'email',p:'you@example.com',a:'email'};
+var STATE_R={l:'State',r:1,t:'state'};
+var STATE_O={l:'State',t:'state'};
+
+var D={
+dealer:{
+  lbl:'Become a dealer',btn:'Submit enquiry',
+  ty:'Our regional sales team will be in touch within 48 hours to discuss territory availability and next steps.',
+  f:[NAME,MOB,
+     {l:'Business name',r:1,p:'Shop / firm name'},{l:'Years in business',p:'e.g. 5 years'},
+     STATE_R,{l:'District / city',r:1,p:'Your district'},
+     {l:'Current product lines you deal in',p:'e.g. UPVC pipes, fittings…',w:12},
+     {l:'Message',o:1,t:'textarea',p:'Anything else we should know',w:12}],
+  sb:[
+    {h:'What to expect',i:[['clock','Regional sales team contacts you within 48 hours'],['map-pin','Territory availability checked before onboarding'],['gift','Access to incentive programmes and annual network meets']]},
+    {h:'Products you can deal in',tags:['UPVC','CPVC','SWR', 'UGD','Agriculture','Water Storage Tank','Luxury Bath Fittings']},
+    {n:'Already a dealer? Call '+PHONE}
+  ]},
+dist:{
+  lbl:'Become a distributor',btn:'Submit enquiry',
+  ty:'A senior channel manager will reach out within 48 hours to discuss territory and onboarding.',
+  f:[NAME,MOB,
+     {l:'Company name',r:1,p:'Your company'},
+     {l:'Annual turnover',t:'select',opts:['Below ₹1 Cr','₹1–5 Cr','₹5–20 Cr','Above ₹20 Cr'],ph:'Select range'},
+     STATE_R,{l:'Districts covered',r:1,p:'List districts'},
+     {l:'Existing distribution lines',p:'e.g. Pipes, plumbing hardware…',w:12},
+     {l:'Message',o:1,t:'textarea',p:'Anything else we should know',w:12}],
+  sb:[
+    {h:'What to expect',i:[['clock','Senior channel manager contacts you within 48 hours'],['map-pin','Exclusive territory rights based on region and capacity'],['medal','Recognition trips and performance rewards']]},
+    {n:'Already a distributor? Call '+PHONE}
+  ]},
+proj:{
+  lbl:'Infrastructure / project enquiry',btn:'Submit project enquiry',
+  ty:'Our projects desk will review your brief and get back to you within 24 hours.',
+  f:[NAME,{l:'Organisation',r:1,p:'Company / govt body'},
+     {l:'Designation',p:'Your role'},{l:'Mobile / email',r:1,t:'contact',p:'Preferred contact'},
+     {l:'Project type',r:1,t:'select',opts:['Government infrastructure','Private real estate','Industrial','Agricultural','Other'],ph:'Select'},
+     {l:'Estimated value',t:'select',opts:['Below ₹50L','₹50L–2 Cr','Above ₹2 Cr'],ph:'Select range'},
+     {l:'Products required',p:'e.g. HDPE pipes, CPVC fittings…',w:12},
+     {l:'Project brief',r:1,t:'textarea',p:'Location, scope, timeline, special requirements',w:12}],
+  sb:[
+    {h:'Dedicated projects team',i:[['user-check','Enquiry routed directly to our infrastructure projects desk'],['clock','Response within 24 hours'],['file-description','BOQ support and site visits can be arranged']]},
+    {h:'Direct contact',i:[['mail','enquiry@skipperlimited.com'],['phone',PHONE]]}
+  ]},
+prod:{
+  lbl:'Product / general enquiry',btn:'Send enquiry',
+  ty:'We will get back to you within 24–48 business hours.',
+  f:[NAME,MOB,
+     {l:'Product you’re enquiring about',r:1,t:'select',opts:PRODUCTS,ph:'Select product',w:12},
+     STATE_O,{l:'City',p:'Your city'},
+     {l:'Your query',r:1,t:'textarea',p:'Specification, size, availability, pricing…',w:12}],
+  sb:[
+    {h:'Quick help',i:[['clock','We respond within 24–48 business hours'],['file-description','Technical datasheets available on each product page']]},
+    {h:'Call or email directly',i:[['mail','enquiry@skipperlimited.com'],['phone',PHONE]]}
+  ]},
+jobs:{
+  lbl:'Careers / job application',btn:'Submit application',
+  ty:'Our HR team will review your application within 7 working days and reach out if there is a fit.',
+  f:[NAME,MOB,EMAIL,
+     {l:'Experience',t:'select',opts:['Fresher','1–3 years','3–7 years','7+ years'],ph:'Select'},
+     {l:'Role / department interested in',r:1,p:'e.g. Sales, Marketing, Operations…',w:12},
+     {l:'Upload resume',r:1,t:'file',accept:'.pdf,.doc,.docx',types:['pdf','doc','docx'],icon:'upload',txt:'Click to upload PDF or DOCX (max 5 MB)',bad:'Upload a PDF or DOCX file up to 5 MB',w:12},
+     {l:'Cover note',o:1,t:'textarea',p:'Why you’d like to join Skipper Pipes',w:12}],
+  sb:[
+    {h:'Working at Skipper',i:[['users','2,100+ employees across manufacturing and sales'],['map-pin','Headquartered in Kolkata, pan-India presence'],['clock','Applications reviewed within 7 working days']]},
+    {n:'We hire across sales, marketing, manufacturing, logistics, and corporate functions.'}
+  ]},
+comp:{
+  lbl:'Complaint / after-sales support',btn:'Submit complaint',
+  ty:'Your complaint has been logged. We will acknowledge within 24 hours and aim to resolve within 5 working days.',
+  f:[NAME,MOB,
+     {l:'Product with issue',r:1,t:'select',opts:PRODUCTS.filter(function(p){return p!=='Strainer Pipes'}),ph:'Select product'},
+     {l:'Purchase date (approx.)',p:'MM/YYYY'},
+     {l:'Issue type',r:1,t:'select',opts:['Product defect','Delivery issue','Wrong product supplied','Warranty claim','Other'],ph:'Select',w:12},
+     {l:'Describe the issue',r:1,t:'textarea',p:'What happened, when, and what resolution you need',w:12},
+     {l:'Attach photo / document',o:1,t:'file',accept:'image/*,.pdf',types:['jpg','jpeg','png','webp','gif','pdf'],icon:'photo',txt:'Upload image or invoice (max 5 MB)',bad:'Upload an image or PDF up to 5 MB',w:12}],
+  sb:[
+    {h:'Resolution commitment',i:[['clock','Acknowledgement within 24 hours'],['refresh','Resolution or update within 5 working days']]},
+    {h:'Urgent issues?',i:[['phone',PHONE],['mail','enquiry@skipperlimited.com']]},
+    {n:'Please have your purchase details ready to help us resolve faster.'}
+  ]},
+media:{
+  lbl:'Media & advertising',btn:'Send message',
+  ty:'Our communications team will be in touch within 48 hours.',
+  f:[NAME,{l:'Organisation',r:1,p:'Publication / agency'},
+     EMAIL,{l:'Contact type',r:1,t:'select',opts:['Press / editorial','Advertising','Brand collaboration','Content partnership'],ph:'Select'},
+     {l:'Brief / requirement',r:1,t:'textarea',p:'What you’re working on and how we can help',w:12}],
+  sb:[
+    {h:'Media & communications',i:[['clock','Response within 48 hours'],['file-description','Press kits and brand assets available on request']]},
+    {h:'Direct contact',i:[['mail','enquiry@skipperlimited.com']]}
+  ]},
+inv:{
+  lbl:'Investor relations',btn:'Send query',
+  ty:'Our investor relations team will respond within 3 working days.',
+  f:[NAME,EMAIL,
+     {l:'Query type',r:1,t:'select',opts:['Shareholding / demat','Annual report / financials','Dividend / bonus','General IR query'],ph:'Select',w:12},
+     {l:'Your query',r:1,t:'textarea',p:'Please describe your query in detail',w:12}],
+  info:'For share-related queries, also contact our registrar: Link Intime India Pvt. Ltd.',
+  sb:[
+    {h:'Investor relations',i:[['clock','Response within 3 working days'],['external-link','BSE: 538562 \u00a0|\u00a0 NSE: SKIPPER']]},
+    {h:'Registrar & transfer agent',i:[['building','Link Intime India Pvt. Ltd.']]},
+    {h:'Direct contact',i:[['mail','enquiry@skipperlimited.com']]}
+  ]}
+};
+
+/* ---------- helpers ---------- */
+var cur=null,fields=[];
+function $(id){return document.getElementById(id)}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+function linkify(t){
+  return esc(t)
+    .replace(/([\w.]+@skipperlimited\.com)/g,'<a href="mailto:$1">$1</a>')
+    .replace('+91 33 2285 1231/32','<a href="tel:+913322851231">+91 33 2285 1231</a> / <a href="tel:+913322851232">32</a>');
+}
+
+/* ---------- form loading (clones the matching <template>) ---------- */
+function loadForm(k){
+  var tpl=$('form-'+k);
+  var frag=tpl.content.cloneNode(true);
+  var form=frag.querySelector('form');
+  form.setAttribute('data-reason',k);
+  form.setAttribute('novalidate','');           /* validation handled in onSubmit */
+
+  /* Safety net: FormData ignores inputs with no name, so fall back to the id */
+  form.querySelectorAll('input,select,textarea').forEach(function(c){
+    if(!c.name&&c.id)c.name=c.id.replace(/-/g,'_');
+  });
+
+  /* Tell the backend which reason was picked (useful if all forms post to one endpoint) */
+  var h=document.createElement('input');
+  h.type='hidden';h.name='reason';h.value=k;
+  form.appendChild(h);
+
+  var err=document.createElement('div');
+  err.className='formerr';err.setAttribute('role','alert');
+  form.appendChild(err);
+
+  $('fout').replaceChildren(frag);
+  return $('fout').querySelector('form');
+}
+function renderSide(k){
+  var out='';
+  D[k].sb.forEach(function(b,idx){
+    if(idx)out+='<div class="sbdiv"></div>';
+    if(b.h)out+='<h3 class="sbh">'+esc(b.h)+'</h3>';
+    if(b.i)b.i.forEach(function(r){out+='<div class="sbi">'+svg(r[0])+'<span>'+linkify(r[1])+'</span></div>'});
+    if(b.tags)out+='<div class="stags">'+b.tags.map(function(t){return '<span class="stag">'+esc(t)+'</span>'}).join('')+'</div>';
+    if(b.n)out+='<p class="sbnote mb-0">'+linkify(b.n)+'</p>';
+  });
+  $('sout').innerHTML=out;
+}
+
+/* ---------- validation + submit ---------- */
+function clearErrors(form){
+  form.querySelectorAll('.is-invalid').forEach(function(el){el.classList.remove('is-invalid');el.removeAttribute('aria-invalid')});
+  form.querySelectorAll('.invalid-feedback').forEach(function(el){el.remove()});
+  var fe=form.querySelector('.formerr');if(fe)fe.style.display='none';
+}
+function flag(el,msg){
+  el.classList.add('is-invalid');el.setAttribute('aria-invalid','true');
+  var m=document.createElement('div');m.className='invalid-feedback';m.textContent=msg;
+  el.insertAdjacentElement('afterend',m);
+}
+function formError(form,msg){
+  var fe=form.querySelector('.formerr');
+  fe.textContent=msg;fe.style.display='block';
+}
+function validate(form){
+  clearErrors(form);
+  var first=null;
+  form.querySelectorAll('input,select,textarea').forEach(function(c){
+    if(c.type==='hidden')return;
+    var v=(c.value||'').trim(),msg='';
+    if(c.required&&!v)msg='This field is required';
+    else if(v&&c.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))msg='Enter a valid email address';
+    else if(v&&c.type==='tel'&&!phoneOk(v))msg='Enter a valid 10-digit mobile number';
+    if(msg){flag(c,msg);if(!first)first=c}
+  });
+  if(first){formError(form,'Please fix the highlighted fields and try again.');first.focus();}
+  return !first;
+}
+function phoneOk(v){var d=v.replace(/\D/g,'');if(d.length===12&&d.indexOf('91')===0)d=d.slice(2);if(d.length===11&&d[0]==='0')d=d.slice(1);return /^[6-9]\d{9}$/.test(d)}
+
+function onSubmit(e){
+  e.preventDefault();
+  var form=e.target;
+  if(!validate(form))return;
+
+  var url=form.getAttribute('action');
+  if(!url||url==='#'){done();return;}           /* prototype mode: no backend yet */
+
+  /* Laravel: set action="{{ route('contact.dealer') }}" and keep @csrf inside the form */
+  var btn=form.querySelector('[type=submit]');
+  btn.disabled=true;
+  fetch(url,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json','X-Requested-With':'XMLHttpRequest'}})
+    .then(function(r){
+      if(r.ok){done();return}
+      if(r.status===422){
+        return r.json().then(function(j){
+          var first=null;
+          Object.keys(j.errors||{}).forEach(function(k){
+            var el=form.querySelector('[name="'+k+'"]');
+            if(el){flag(el,j.errors[k][0]);if(!first)first=el}
+          });
+          formError(form,'Please fix the highlighted fields and try again.');
+          if(first)first.focus();
+        });
+      }
+      throw new Error(r.status);
+    })
+    .catch(function(){formError(form,'Something went wrong. Please try again or call us.')})
+    .then(function(){btn.disabled=false});
+}
+
+/* ---------- steps / views ---------- */
+function setStep(n){
+  [1,2,3].forEach(function(i){
+    var sp=$('sp'+i),sn=$('sn'+i);
+    sp.className='flow-step'+(i<n?' dn':(i===n?' act':''));
+    sn.innerHTML=i<n?svg('check'):i;
+  });
+  $('sd1').className='pipe'+(n>1?' dn':'');
+  $('sd2').className='pipe'+(n>2?' dn':'');
+  var names={1:'Choose reason',2:'Fill details',3:'Done'};
+  $('live').textContent='Step '+n+' of 3: '+names[n];
+}
+function show(v){['v1','v2','v3'].forEach(function(id){$(id).hidden=(id!==v)})}
+function toFlow(){
+  var el=$('flow');
+  if(el&&el.scrollIntoView)el.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});
+}
+function pick(card){
+  cur=card.dataset.k;
+  document.querySelectorAll('.intent').forEach(function(c){c.classList.toggle('sel',c===card)});
+  $('flbl').innerHTML=esc(D[cur].lbl);
+  loadForm(cur);renderSide(cur);
+  show('v2');setStep(2);toFlow();
+  $('flbl').focus({preventScroll:true});
+}
+function goBack(){
+  var prev=document.querySelector('.intent.sel');
+  show('v1');setStep(1);
+  if(prev)prev.focus({preventScroll:true});
+}
+function done(){
+  $('tym').textContent=D[cur].ty;
+  show('v3');setStep(3);
+  $('sn3').innerHTML=svg('check');$('sp3').className='flow-step dn';
+  toFlow();$('tyh').focus({preventScroll:true});
+}
+function again(){
+  cur=null;
+  document.querySelectorAll('.intent').forEach(function(c){c.classList.remove('sel')});
+  show('v1');setStep(1);toFlow();
+}
+
+/* ---------- init ---------- */
+document.addEventListener('DOMContentLoaded',function(){
+  paintIcons();
+  document.querySelectorAll('.intent').forEach(function(c){c.addEventListener('click',function(){pick(c)})});
+  $('fout').addEventListener('submit',onSubmit);
+  $('backBtn').addEventListener('click',goBack);
+  $('againBtn').addEventListener('click',again);
+});
+})();
+</script>
+</body>
+</html>
